@@ -1,4 +1,7 @@
 <div class="todo-list">
+  <todo-count></todo-count>  
+  <add-todo></add-todo>
+  <hr>
   <h2>Todo List</h2>
   <ul>
     <li [ngClass]="todo.completed ? 'checked' : ''" *ngFor="let todo of todos | async">
