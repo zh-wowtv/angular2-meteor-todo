@@ -1,0 +1,4 @@
+<form [formGroup]="addForm" (ngSubmit)="addTodo()">
+  <label for="task">Create a task:</label>
+  <input type="text" placeholder="Type a task here..." name="task" formControlName="name">
+</form>

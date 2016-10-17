@@ -1,0 +1,11 @@
+<div class="todo-list">
+  <h2>Todo List</h2>
+  <ul>
+    <li [ngClass]="todo.completed ? 'checked' : ''" *ngFor="let todo of todos | async">
+      <input type="checkbox" [(ngModel)]="todo.completed" (change)="completeTodo(todo, $event.target.checked)">
+      <input type="text" [(ngModel)]="todo.name" name="todoItem" (change)="nameChanged(todo)" [readonly]="todo.completed">      
+      [<a href="#" (click)="deleteTodo(todo)">Delete</a>]
+    </li>
+  </ul>
+</div>
+ 
